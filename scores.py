@@ -1,5 +1,5 @@
 def revisescore(wrongscores):
-    rightscores = []  # 創建一個空清單，用於存儲修正後的成績
+    rightscores = []  # 建立一個空列表，用於儲存修正後的成績
 
     for i in wrongscores:
         # 將十位數和個位數互換，然後添加到正確成績列表中
@@ -10,7 +10,7 @@ def revisescore(wrongscores):
 
     return rightscores
 
-# 輸入錯誤的成績清單
+# 輸入錯誤的成績列表
 wrongscores = [35, 46, 57, 91, 29]
 
 # 調用函數來修正成績
