@@ -1,19 +1,20 @@
-def reverscore(num):
-    strNum = str(num)
-    reversedStr = strNum[::-1]
-    return int(reversedStr)
+def revisescore(wrongscores):
+    rightscores = []  # 創建一個空清單，用於存儲修正後的成績
 
-a,b,c,d,e = input().split()
-a = (reverscore(a))
-b = (reverscore(b))
-c = (reverscore(c))
-d = (reverscore(d))
-e = (reverscore(e))
+    for i in wrongscores:
+        # 將十位數和個位數互換，然後添加到正確成績列表中
+        units = i // 10
+        tens = i % 10
+        revisescore = tens * 10 + units
+        rightscores.append(revisescore)
 
-scores=[]
-scores = list.append(a)
-scores = list.append(b)
-scores = list.append(c)
-scores = list.append(d)
-scores = list.append(e)
-print(scores)
+    return rightscores
+
+# 輸入錯誤的成績清單
+wrongscores = [35, 46, 57, 91, 29]
+
+# 調用函數來修正成績
+revisescores = revisescore(wrongscores)
+
+# 列印修正後的成績
+print(revisescores)
