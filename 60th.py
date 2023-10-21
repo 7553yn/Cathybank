@@ -5,6 +5,5 @@ s = list(s)
 s.sort()
 
 for qstr in s:
-    set(s)
     qct = s.count(qstr) 
     print(qstr,qct)
